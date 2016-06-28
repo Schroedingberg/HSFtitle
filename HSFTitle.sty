@@ -1,0 +1,62 @@
+
+% This package defines how titles should
+% be typeset at the Fresenius University
+% Please check for updates
+\ProvidesPackage{HSFTitle}
+\RequirePackage{graphicx}
+
+% The information the author needs to provide
+\newcommand*{\department}[1]{\gdef\@department{Department of #1}}
+\newcommand*{\@department}{Department of}
+\newcommand*{\course}[1]{\gdef\@course{Course of studies #1}}
+\newcommand*{\@course}{Course of studies}
+\newcommand*{\place}[1]{\gdef\@place{Place of studies #1}}
+\newcommand*{\@place}{Place of studies}
+\newcommand*{\birthplace}[1]{\gdef\@birthplace{born in #1}}
+\newcommand*{\@birthplace}{born in}
+\newcommand*{\topic}[1]{\gdef\@topic{#1}}
+\newcommand*{\@topic}{Topic}
+\newcommand*{\reviewer}[2]{ \gdef\@reviewer{1st Reviewer: #1\\ 2nd Reviewer: #2}}
+\newcommand*{\@reviewer}{Reviewers}
+\newcommand*{\degree}[1]{\gdef\@degree{Approved #1 thesis\\ for the
+    achievement of an academic degree as \\ #1 of Science}}
+\newcommand*{\@degree}{Academic degree to be accomplished}
+%\renewcommand*{\author}[4]{\gdef \@author{#1}}
+%\renewcommand*{\@author}{}
+
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+\centering
+% Printing of the HSF Logo. The file with the specified name must be
+% included in the working directory. For a system wide installation of
+% the package, you should put the image file in your $PATH
+{\includegraphics[width=0.7 \textwidth]{Fresenius_Logo.png}\unskip\strut\par}
+\vspace{1 cm}
+{\selectfont\@department\par}
+%\vspace{1 cm}
+{\selectfont\@course\unskip\strut\par}
+%\vspace{1 cm}
+{\selectfont\@place\unskip\strut\par}
+\vspace{1cm}
+%TOPIC
+{\fontsize{16}{18}\bf\selectfont\@topic\unskip\strut\par}
+\vspace{1 cm}
+{\selectfont\@degree\unskip\strut\par}
+\vspace{1cm}
+{\selectfont\@author\unskip\strut\par}
+{\selectfont\@birthplace\unskip\strut\par}
+\raggedright{}
+\vspace{8 cm}
+{\selectfont\@reviewer\unskip\strut\par}
+\raggedleft{}
+%\vspace
+%Date of contribution
+{\selectfont\@date\unskip\strut\par}
+
+\vfill
+\end{titlepage}
+}
+
+\endinput
+
+
