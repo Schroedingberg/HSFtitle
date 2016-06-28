@@ -1,10 +1,14 @@
 
 % This package provides an alternative titlepage design to make supervisors from other institutions happy.
 
-\ProvidesPackage{HSFaltTitle}
+\ProvidesPackage{HSFalttitle}
 \RequirePackage{graphicx}
 
 % The information the author needs to provide
+\newcommand*{\logo1}[1]{\gdef\@logo1{\includegraphics[width = 0.3 \textwidth]{#1}}}
+\newcommand*{\@logo1}{Logofiles}
+\newcommand*{\logo2}[1]{\gdef\@logo2{\includegraphics[width = 0.3 \textwidth]{#1}}}
+\newcommand*{\@logo2}{Logofiles}
 \newcommand*{\department}[1]{\gdef\@department{Department of #1}}
 \newcommand*{\@department}{Department of}
 \newcommand*{\course}[1]{\gdef\@course{Course of studies #1}}
@@ -20,16 +24,17 @@
 \newcommand*{\degree}[1]{\gdef\@degree{Approved #1 thesis\\ for the
     achievement of an academic degree as \\ #1 of Science}}
 \newcommand*{\@degree}{Academic degree to be accomplished}
+\newcommand*{\advisors}[2]{\gdef\@advisors{Advisors\\#1 #2}}
+\newcommand*{\@advisors}{Advisors}
 %\renewcommand*{\author}[4]{\gdef \@author{#1}}
 %\renewcommand*{\@author}{}
 
 \renewcommand*{\maketitle}{%
 \begin{titlepage}
 \centering
-% Printing of the HSF Logo. The file with the specified name must be
-% included in the working directory. For a system wide installation of
-% the package, you should put the image file in your $PATH
-{\includegraphics[width=0.7 \textwidth]{Fresenius_Logo.png}\unskip\strut\par}
+% Printing of the logos
+{\logo1\unskip\strut\par}
+{\logo2\unskip\strut\par}
 \vspace{1 cm}
 {\selectfont\@department\par}
 %\vspace{1 cm}
@@ -41,21 +46,37 @@
 {\fontsize{16}{18}\bf\selectfont\@topic\unskip\strut\par}
 \vspace{1 cm}
 {\selectfont\@degree\unskip\strut\par}
+\vspace{1 cm}
+{\selectfont\@advisors\unskip\strut\par}
 \vspace{1cm}
 {\selectfont\@author\unskip\strut\par}
 {\selectfont\@birthplace\unskip\strut\par}
 \raggedright{}
-\vspace{8 cm}
+\vspace{4 cm}
 {\selectfont\@reviewer\unskip\strut\par}
 \raggedleft{}
 %\vspace
 %Date of contribution
 {\selectfont\@date\unskip\strut\par}
-
+{\includegraphics[width=0.5 \textwidth]{Fresenius_Logo.png}\unskip\strut\par}
 \vfill
 \end{titlepage}
 }
 
 \endinput
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
