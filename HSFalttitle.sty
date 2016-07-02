@@ -28,37 +28,38 @@
 \newcommand*{\@advisors}{Advisors}
 %\renewcommand*{\author}[4]{\gdef \@author{#1}}
 %\renewcommand*{\@author}{}
-
+\newcommand{\figsize}{0.4}
 \renewcommand*{\maketitle}{%
 \begin{titlepage}
 \centering
 % Printing of the logos
-{\logo1\unskip\strut\par}
-{\logo2\unskip\strut\par}
+{\includegraphics[width = \figsize \textwidth]{ups.jpg}\ \includegraphics[width = \figsize \textwidth]{WSU_Logo.png}\unskip\strut\par}
 \vspace{1 cm}
-{\selectfont\@department\par}
+{\fontsize{16}{18}\selectfont\@department\par}
 %\vspace{1 cm}
-{\selectfont\@course\unskip\strut\par}
+{\fontsize{16}{18}\selectfont\@course\unskip\strut\par}
 %\vspace{1 cm}
-{\selectfont\@place\unskip\strut\par}
+{\fontsize{16}{18}\selectfont\@place\unskip\strut\par}
 \vspace{1cm}
 %TOPIC
-{\fontsize{16}{18}\bf\selectfont\@topic\unskip\strut\par}
+{\fontsize{20}{22}\bf\selectfont\@topic\unskip\strut\par}
 \vspace{1 cm}
-{\selectfont\@degree\unskip\strut\par}
+{\fontsize{16}{18}\selectfont\@degree\unskip\strut\par}
 \vspace{1 cm}
-{\selectfont\@advisors\unskip\strut\par}
+{\fontsize{16}{18}\selectfont\@advisors\unskip\strut\par}
 \vspace{1cm}
-{\selectfont\@author\unskip\strut\par}
-{\selectfont\@birthplace\unskip\strut\par}
+{\fontsize{16}{18}\selectfont\@author\unskip\strut\par}
+{\fontsize{16}{18}\selectfont\@birthplace\unskip\strut\par}
 \raggedright{}
-\vspace{4 cm}
-{\selectfont\@reviewer\unskip\strut\par}
+\vspace{2 cm}
+{\fontsize{16}{18}\selectfont Western Sydney University, School of Science and Health\unskip\strut\par}
+{\fontsize{16}{18}\selectfont Universit\'e Paul Sabatier Toulouse III  \unskip\strut\par}
+{\fontsize{16}{18}\selectfont June 2016 \unskip\strut\par}
 \raggedleft{}
 %\vspace
 %Date of contribution
-{\selectfont\@date\unskip\strut\par}
-{\includegraphics[width=0.5 \textwidth]{Fresenius_Logo.png}\unskip\strut\par}
+{\includegraphics[width=0.4 \textwidth]{Fresenius_Logo.png}\unskip\strut\par}
+
 \vfill
 \end{titlepage}
 }
