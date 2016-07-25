@@ -180,3 +180,4 @@ TSWLatexianTemp*
 *~[0-9]*
 /auto/HSFalttitle.el
 /make.sh
+/auto/MWE.el
