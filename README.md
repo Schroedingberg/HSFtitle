@@ -26,3 +26,5 @@ Then you need to provide the information that you want to appear on the titlepag
 	\degree{Bachelor}
 
 
+# Try it
+Use the [minimum working example](./MWE.tex) to try if you have everything set up to use this package and to see what [it looks like](./MWE.pdf).
